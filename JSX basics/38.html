@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1">
+
+        </div>
+        <script type="text/babel">
+            var a=[1,10,20,50,60,26,44,85,69];
+             var b= a.map(function(c){
+                return (c>25)?<li>{c}</li>:null
+             })
+             ReactDOM.render(b,document.getElementById("d1"))
+
+        </script>
+    </body>
+</html>
