@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="d1">
+
+    </div>
+    <script type="text/babel">
+        var a = ["https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649", 
+        "https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/enhancer/2.jpg", 
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnhoHDIbSi0WJkzGYr6wemnCS2OzSRkhokmA&s"];
+
+        var b = <div><table>
+            <tr>
+
+                {
+                    a.map(function (c) {
+                        return <td><img src={c} width="100px" /></td>
+                    })
+                }
+            </tr>
+
+        </table></div>
+        ReactDOM.render(b, document.getElementById("d1"))
+    </script>
+</body>
+
+</html>

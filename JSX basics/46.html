@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="d1">
+
+    </div>
+    <script type="text/babel">
+        var a = {
+            firstname: 'venki',
+            lastname: 'mirithipati',
+            location: 'vizag'
+        }
+        var b = <div>
+          
+            <h1>  firstname:{a.firstname}  </h1>
+            <h1>  lastname:{a.lastname}</h1>
+            <h1>    location:{a.location}</h1>
+          
+        
+        </div>
+
+        ReactDOM.render(b,document.getElementById("d1"))
+    </script>
+</body>
+
+</html>
