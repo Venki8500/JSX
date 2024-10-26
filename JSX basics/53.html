@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var f= [
+                "https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg",
+                "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg",
+                "https://cdn.pixabay.com/photo/2016/05/09/10/42/weimaraner-1381186_1280.jpg"
+            ]
+            var g=f.map(function(i){
+                return <img src={i} width="200px"/>
+            })
+        
+              ReactDOM.render(g,document.getElementById("d1")) 
+        </script>
+    </body>
+</html>
