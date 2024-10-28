@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <h1 style="color:orange">This is HTML element</h1>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <script type="text/babel">
+         var x = document.createElement("h1");
+         x.innerHTML="This is DOM element";
+         x.style.color="blue"
+         document.getElementById("d1").appendChild(x);
+
+          var x=React.createElement("h1",{style:{color:"red"}},"This is React element");
+          ReactDOM.render(x,document.getElementById("d2"));
+
+          var y= <h1 style={{color:"green"}}> This is JSX element {10+20}</h1>
+          ReactDOM.render(y,document.getElementById("d3"))
+
+        </script>
+    </body>
+</html>
