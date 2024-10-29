@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var player1=[{
+                name:'sindhu',
+                score:0,
+                sets:0,
+                service:"true"
+            }]
+
+            var player2=[{
+                name:'mariyan',
+                score:0,
+                sets:0,
+                service:"false"
+            }]
+
+            var x=<div>
+                <table border="2">
+                    <th>name</th>
+                    <th>score</th>
+                    <th>sets</th>
+                    <th>service</th>
+                    <tbody>
+                        
+                            {
+                                player1.map(function(c){
+                                    return <tr>
+                                    <td>{c.name}</td>
+                                     <td>{c.score}</td>
+                                     <td>{c.sets}</td>
+                                     <td>{c.service}</td>
+                                    </tr>
+                                })
+                            }
+                            
+                        
+                            {
+                                player2.map(function(a){
+                                    return <tr>
+                                        <td>{a.name}</td>
+                                     <td>{a.score}</td>
+                                     <td>{a.sets}</td>
+                                     <td>{a.service}</td>
+                                     </tr>
+                                })
+                            }
+                    
+                        </tbody>
+                    </table>
+                </div>
+
+                ReactDOM.render(x,document.getElementById("root"))
+
+
+            
+
+
+
+        </script>
+    </body>
+</html>
