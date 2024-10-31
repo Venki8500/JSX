@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="players.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function a(){
+            players.sort(function(a,b){
+                if(a.age>b.age){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+            genUI();
+        }
+
+        function b(){
+            players.sort(function(a,b){
+                if(a.firstname>b.firstname){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+            genUI();
+        }
+
+        function c(){
+            players.sort(function(a,b){
+                if(a.lastname>b.lastname){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+            genUI();
+        }
+
+        function d(){
+            players.sort(function(a,b){
+                if(a.gender>b.gender){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+            genUI();
+        }
+
+        function e(){
+            players.sort(function(a,b){
+                if(a.place>b.place){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+            genUI();
+        }
+
+        function f(){
+            players.sort(function(a,b){
+                if(a.date_of_birth>b.date_of_birth){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+            genUI();
+        }
+
+        function g(){
+            players.sort(function(a,b){
+                if(a.centuries>b.centuries){
+                    return -1
+                }
+                else{
+                    return 1
+                }
+            })
+            genUI();
+        }
+
+       function genUI(){
+        var x=<table border="2">
+            <thead>
+                <th onClick={()=>{b()}}>Firstname</th>
+                <th onClick={()=>{c()}}>Lastname</th>
+                <th onClick={()=>{a()}}>Age</th>
+                <th onClick={()=>{d()}}>Gender</th>
+                <th onClick={()=>{e()}}>Place</th>
+                <th onClick={()=>{f()}}>Date Of Birth</th>
+                <th onClick={()=>{g()}}>Centuries</th>
+                </thead>
+                <tbody>
+                    {
+                        players.map(function (p){
+                            return <tr>
+                                <td>{p.firstname}</td>
+                                <td>{p.lastname}</td>
+                                <td>{p.age}</td>
+                                <td>{p.gender}</td>
+                                <td>{p.place}</td>
+                                <td>{p.date_of_birth}</td>
+                                <td>{p.centuries}</td>
+                                </tr>
+                        })
+                    }
+                    </tbody>
+            </table>
+
+            ReactDOM.render(x,document.getElementById("root"))
+       }
+       genUI();
+
+    </script>
+</body>
+
+</html>
