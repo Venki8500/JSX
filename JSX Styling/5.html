@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+    <div id="d1" style="border:1px solid;height: 180px; padding-left: 10px;" >
+
+    </div>
+        <script type="text/babel">
+        var a=[{
+            Firstname:"venkatesh",
+            Gender:"male",
+            Age:"26"
+        }]
+        var b=a.map(function(c){
+            return <div >
+                <h1>Firstname:{c.Firstname}</h1>
+                <h3>Gender:{c.Gender}</h3>
+                <i>Age:{c.Age}</i>
+                </div>
+        })
+        ReactDOM.render(b,document.getElementById("d1"))
+        </script>
+    </body>
+</html>
