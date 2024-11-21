@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+              function abc(){
+                var x= document.getElementById("d").value;
+                document.getElementById("e") .innerHTML=x.toUpperCase();  
+                }
+            var a=<div>
+                <input type="text" id="d"/>
+                <button onClick={()=>{abc()}}>click me</button>
+                 <h1 id="e"></h1>
+                </div>
+
+                ReactDOM.render(a,document.body)
+
+        </script>
+    </body>
+</html>
