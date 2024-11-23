@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            
+
+            function xyz(ev){
+                 var a=+document.getElementById("d1").value;
+             var b=+document.getElementById("d2").value;
+                var c=a+b;
+                document.getElementById("d3").innerHTML=c;
+            }
+
+
+            var x=<div>
+                <input type="number"   id="d1"/><br/><br/>
+                <input type="number"  id="d2" /><br/><br/>
+                <button onClick={(ev)=>{xyz(ev)}}>Add</button>
+                <div><h1 id="d3"></h1></div>
+                </div>
+
+
+                ReactDOM.render(x,document.body)
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            function ab(){
+                var a=+document.getElementById("d1").value;
+                var b=+document.getElementById("d2").value;
+                var c=a-b;
+                document.getElementById("d3").innerHTML=c;
+            }
+            var y=<div>
+                <input type="text" id="d1"/> <br/><br/>
+                <input type="text"  id="d2"/> <br/><br/>
+                <button onClick={()=>{ab()}}>Substraction</button><br/>
+               <div><h1 id="d3"></h1></div>
+                </div>
+                ReactDOM.render(y,document.body)
+        </script>
+    </body>
+</html>
