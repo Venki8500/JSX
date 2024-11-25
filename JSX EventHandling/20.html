@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+                function xyz(){
+                    document.getElementById("d3").innerHTML="INDIA";
+                    // document.getElementById("d3").value=a;
+                }
+                function abc(){
+                    var a=document.getElementById("d3").innerHTML="UNITED STATES OF AMERICA";
+                    // document.getElementById("d3").value=a;
+                }
+
+
+            var x=<div>
+                <input type="radio" id="d1" onChange={()=>{xyz()}} name="hi"/>IND &ensp;&ensp;&ensp;
+                <input type="radio" id="d2" onChange={()=>{abc()}} name="hi"/>USA<br/>
+                <div><h1 id="d3"></h1></div>
+                </div>
+
+                ReactDOM.render(x,document.body)
+
+        </script>
+    </body>
+</html>

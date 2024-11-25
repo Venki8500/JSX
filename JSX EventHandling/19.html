@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            function mul(){
+                var a=document.getElementById("d1").value;
+                var b=document.getElementById("d2").value;
+                var c=a*b;
+                document.getElementById("d3").innerHTML=c;
+            }
+            function div(){
+                var a=document.getElementById("d1").value;
+                var b=document.getElementById("d2").value;
+                var c=a/b;
+                document.getElementById("d3").innerHTML=c;
+            }
+            
+            var x=<div>
+                <input type="text" id="d1"/><br/><br/>            
+                <input type="text" id="d2"/><br/><br/> 
+                <button onClick={()=>{mul()}}>mul</button> <button onClick={()=>{div()}}>div</button> <br/>
+                <h1 id="d3"></h1>          
+                 </div>
+
+                 ReactDOM.render(x,document.body)
+
+        </script>
+    </body>
+</html>
