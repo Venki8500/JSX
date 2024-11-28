@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            function abc(){
+                var g=document.getElementById("d2").value;
+                document.getElementById("d1").innerHTML=g;
+            }
+            var a=[]
+            var x=<div>
+                <input type="checkbox" onChange={()=>{abc()}} value="reactjs" id="d2"/>ReactJS
+                <input type="checkbox" onChange={()=>{abc()}} value="angular" id="d2"/>Angular
+                <input type="checkbox" onChange={()=>{abc()}} value="nodejs" id="d2"/>Nodejs
+                <input type="checkbox" onChange={()=>{abc()}} value="expressjs" id="d2"/>Express 
+                <input type="checkbox" onChange={()=>{abc()}} value="mongodb" id="d2"/>Mongodb
+                <input type="checkbox" onChange={()=>{abc()}} value="mongoose" id="d2"/>Mongoose
+                <input type="checkbox" onChange={()=>{abc()}} value="mysql" id="d2"/>MySql
+
+                <div><h1 id="d1"></h1></div>
+                </div>
+                    ReactDOM.render(x,document.body)
+        </script>
+    </body>
+</html>
