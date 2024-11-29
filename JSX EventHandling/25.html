@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            function a(e){
+             document.getElementById("d1").innerHTML=e;
+            }
+            var x=<div >
+                <button onClick={()=>{a(10)}} >button 1</button>
+                <button onClick={()=>{a(20)}} >button 2</button>
+                <button onClick={()=>{a(30)}} >button 3</button>
+                <button onClick={()=>{a(40)}} >button 4</button>
+                <div><h1 id="d1"></h1></div>
+                </div>
+
+                ReactDOM.render(x,document.body)
+
+        </script>
+    </body>
+</html>
