@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            function abc(){
+                var l=document.getElementById("d1").value;
+                z.push(l);
+                console.log(z);
+                
+                var a=z.forEach(function(m){
+                    document.getElementById("d2").innerHTML="";
+                    var h=document.createElement("h3");
+                    h.innerHTML=z;
+                    document.getElementById("d2").appendChild(h)
+                })
+
+            } 
+
+            var z=[];
+
+            var a=<div>
+                <input type="text" id="d1"/> 
+                <button onClick={()=>{abc()}}>click here to push and display</button>
+                <div id="d2"></div>
+                </div>
+
+                ReactDOM.render(a,document.body)
+
+        </script>
+    </body>
+</html>
