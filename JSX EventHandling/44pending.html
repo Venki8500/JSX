@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+          setInterval(function(){
+            a();
+          })
+          setInterval(function(){
+            b();
+          })
+          clearInterval(function(){
+            c();
+          })
+
+            var x=<div>
+                <h1 id="d1"></h1>:<h1 id="d2"></h1>:<h1 id="d3"></h1>
+                <button onClick={()=>{a()}}>start</button>
+                <button onClick={()=>{b()}}>pause</button>
+                <button onClick={()=>{c()}}>stop</button>
+                </div>
+
+        </script>
+    </body>
+</html>
